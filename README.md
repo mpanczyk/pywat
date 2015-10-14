@@ -196,3 +196,23 @@ TypeError: sum() can't sum strings [use ''.join(seq) instead]
 2
 ```
 
+### `int` caching
+
+```python
+>>> a = 100
+>>> b = 100
+>>> a is b
+True
+>>> a = 1000
+>>> b = 1000
+>>> a is b
+False
+>>> a, b = 1000, 1000
+>>> a is b
+True
+```
+
+Integers from -5..256 are cached.
+It shows only in interactive
+[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
+session, where each input line is parsed and executed separately.
