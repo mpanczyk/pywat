@@ -216,3 +216,12 @@ Integers from -5..256 are cached.
 It shows only in interactive
 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 session, where each input line is parsed and executed separately.
+
+### Tuple unpacking in assignment
+
+```python
+>>> b = 'beta'
+>>> a = b, c = 'XY'
+>>> a, b, c
+('XY', 'X', 'Y')
+```
